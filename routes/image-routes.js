@@ -22,4 +22,4 @@ router.get("/get", authMiddleware, fetchImagesController);
 
 //get all the images
 
-module.exports = router;
+module.exports = router
