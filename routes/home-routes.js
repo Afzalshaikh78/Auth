@@ -8,10 +8,9 @@ router.get("/welcome", authMiddleware, (req, res) => {
     message: "welcome to the home page",
     user: {
       _id: userId,
-       username,
-       role,  
-     }
-
+      username,
+      role,
+    },
   });
 });
 
