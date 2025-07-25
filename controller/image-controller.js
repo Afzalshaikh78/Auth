@@ -31,6 +31,7 @@ const uploadImageController = async (req, res) => {
     fs.unlinkSync(req.file.path);
 
     res.status(201).json({
+
       success: true,
       message: "image uploaded successfully",
       image: newlyUploadedImage,
@@ -40,7 +41,7 @@ const uploadImageController = async (req, res) => {
   catch(e) {
     console.error(e);
     res.status(500).json({
-      success: false,
+      success: false,  
       message: "something went wrong",
     });
   }
