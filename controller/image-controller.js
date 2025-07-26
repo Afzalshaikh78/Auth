@@ -49,7 +49,7 @@ const uploadImageController = async (req, res) => {
 const fetchImagesController = async (req, res) => {
   try {
     //pagination
-    const page = req.query.page || 1;
+    const page = req.query.page || 2;
     const limit = req.query.limit || 5;
     const skip = (page - 1) * limit;
     const sortBy = req.query.sortBy || "createdAt";
