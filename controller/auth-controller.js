@@ -121,7 +121,17 @@ const changePassword = async (req, res) => {
     if (!isPasswordMatch) {
       return res.status(401).json({
         success: false,
-        message: "check the old password",
+        message: "old password is incorrect",
+      });
+    }
+
+
+
+    //check if the old password and new password are same
+    if (oldPassword === newPassword) {      
+      return res.status(400).json({
+        success: false,
+        message: "new password and old password cannot be same",
       });
     }
 
