@@ -18,7 +18,7 @@ const checkFileFilter = (req, file, cb) => {
     cb(null, true)
     return
   } else {
-      cb(new Error('Only image files are allowed!'), false)
+      cb(new Error('Only images are allowed!'), false)
   }
 }
 
